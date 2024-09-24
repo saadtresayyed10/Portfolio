@@ -2,7 +2,7 @@ import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 import { PortableTextBlock } from "@portabletext/types";
 
 // For the Simple Blog Card interface
-export interface SimpleBlogCard {
+export interface simpleBlogCard {
   title: string;
   smallDescription: string;
   currentSlug: string;
@@ -10,7 +10,7 @@ export interface SimpleBlogCard {
 }
 
 // For the Full Blog interface
-export interface FullBlog {
+export interface fullBlog {
   currentSlug: string;
   title: string;
   content: PortableTextBlock[]; // Using PortableTextBlock for content structure
