@@ -5,6 +5,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 30;
+
 async function getData() {
   const query = `
   *[_type == 'blog'] | order(_createdAt desc) {
@@ -26,7 +28,7 @@ const BlogPage = async () => {
 
   return (
     <div className="flex justify-center items-center w-full min-h-screen p-10 my-10 bg-white text-neutral-800 text-center">
-      <div className="grid grid-cols-1  md:grid-cols-2 mt-5 gap-5">
+      <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-2 mt-5 gap-5">
         {data.map((post, idx) => (
           <Card key={idx} className="border border-black">
             <Image
@@ -43,9 +45,7 @@ const BlogPage = async () => {
                 {post.smallDescription}
               </p>
               <Button asChild className="w-full mt-7">
-                <Link href={`/blog/blogContent/${post.currentSlug}`}>
-                  Read More
-                </Link>
+                <Link href={`/blog/${post.currentSlug}`}>Read More</Link>
               </Button>
             </CardContent>
           </Card>

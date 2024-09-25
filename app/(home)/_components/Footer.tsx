@@ -1,4 +1,10 @@
-import { Gamepad2, Instagram, TwitchIcon, Twitter } from "lucide-react";
+import {
+  ArrowUpRight,
+  Gamepad2,
+  Instagram,
+  TwitchIcon,
+  Twitter,
+} from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -27,6 +33,15 @@ const Footer = () => {
       <p className="lg:text-sm text-xs font-monschone text-center mt-2">
         Kondhwa Budruk, Pune - 411048, Maharashtra, India
       </p>
+      <Link
+        href="https://pcrf1.app.neoncrm.com/forms/zakat-gaza-relief"
+        target="_blank"
+      >
+        <p className="mt-2 lg:text-[10px] text-[6px] flex justify-center items-center gap-x-1 text-center underline font-bold">
+          Donate To Palestine
+          <ArrowUpRight className="w-2 h-2" />
+        </p>
+      </Link>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 30; // revalidate at most 30 seconds
+export const revalidate = 30;
 
 async function getData(slug: string) {
   const query = `
@@ -28,15 +28,15 @@ export default async function BlogArticle({
   const data: fullBlog = await getData(params.slug);
 
   return (
-    <div className="flex justify-center items-center w-full min-h-screen mt-8 flex-col bg-white text-neutral-800">
-      <div className="flex justify-between items-center w-full px-8">
+    <div className="flex justify-center items-center w-full min-h-screen mt-8 flex-col bg-white text-neutral-800 lg:p-0 p-8">
+      <div className="flex justify-between items-center w-full lg:px-8 px-4">
         <Link href="/blog">
           <ArrowLeft className="lg:h-12 h-8 w-10 lg:w-16 stroke-[1]" />
         </Link>
         <div />
       </div>
       <h1>
-        <span className="block text-base text-center text-primary font-semibold tracking-wide uppercase underline underline-offset-2">
+        <span className="mt-8 block text-base text-center text-primary font-semibold tracking-wide uppercase underline underline-offset-2">
           Sayyed Saad - Blog
         </span>
         <span className="mt-2 block text-3xl text-center leading-8 font-bold tracking-tight sm:text-4xl">
@@ -50,7 +50,7 @@ export default async function BlogArticle({
         height={800}
         alt="Title Image"
         priority
-        className="rounded-lg mt-8 border"
+        className="rounded-lg mt-8 border-2 border-black shadow-md"
       />
 
       <div className="mt-16 prose prose-blue prose-lg dark:prose-invert prose-li:marker:text-primary prose-a:text-primary">
