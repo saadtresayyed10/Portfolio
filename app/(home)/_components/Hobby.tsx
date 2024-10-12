@@ -5,7 +5,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Link from "next/link";
 
-const About = () => {
+const Hobby = () => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.2 });
 
@@ -53,7 +53,7 @@ const About = () => {
         variants={headingVariants}
         className="font-semibold font-kawede lg:text-5xl text-2xl capitalize"
       >
-        About me
+        Hobbies
       </motion.h3>
       <div className="lg:w-[60%] w-[75%] flex justify-center items-center gap-y-6 flex-col lg:text-base text-sm capitalize tracking-normal">
         <motion.p
@@ -61,14 +61,8 @@ const About = () => {
           animate={controls}
           variants={paragraphVariants}
         >
-          <span className="lg:text-4xl text-2xl">T</span>his all started in 2020
-          in my bedroom when I was thinking about life, goals and things of that
-          nature. My dream job was to be a game developer so I started learning
-          and invested a lot of time. I made several 2D RPG-based games, but had
-          no idea or money to publish on platforms like Steam, Epic, etc... I am
-          from a country called India, and there isn&apos;t much craze about
-          videogames like that but people here tend to like gambling games which
-          for me...
+          I like helping out Batman at night... naah, I am joking, click below
+          to read if you got time.
         </motion.p>
         <motion.button
           initial="hidden"
@@ -76,11 +70,11 @@ const About = () => {
           variants={buttonVariants}
           className="px-6 py-2 hover:bg-[#F5EACC] hover:text-black text-white transition rounded-lg text-sm lg:text-base border-2 border-[#000000] bg-black"
         >
-          <Link href="/about">Read More</Link>
+          <Link href="/hobby">Read More</Link>
         </motion.button>
       </div>
     </div>
   );
 };
 
-export default About;
+export default Hobby;

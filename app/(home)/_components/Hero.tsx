@@ -23,7 +23,7 @@ const Hero = () => {
       >
         <WordRotate
           className="lg:text-2xl text-sm text-neutral-800 font-monschone"
-          words={["Fullstack Web Developer", "Gothic Architecture"]}
+          words={["Fullstack Web Developer", "Gothic Architect"]}
           duration={2000}
         />
         <WordRotate
