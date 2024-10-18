@@ -39,7 +39,7 @@ const Hero = () => {
         className="flex justify-center items-center p-6 bg-neutral-800  shadow-md"
       >
         <Image
-          src="/images/greek.jpg"
+          src="/images/logo.jpg"
           alt="Image"
           width={500}
           height={500}
